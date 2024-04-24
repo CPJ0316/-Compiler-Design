@@ -1,0 +1,60 @@
+class example
+{
+/*4: */
+/*6: const a: int := 5*/
+/*7: var c: int*/
+/*8: */
+	field static int c
+	method public static int add(int, int)
+	max_stack 15
+	max_locals 15
+	{
+/*10: function add (a: int, b: int) : int*/
+	iload 0
+/*11:   result a+b*/
+	iload 1
+	iadd
+	ireturn
+	}
+/*12: end add*/
+/*13: */
+	method public static void main(java.lang.String[])
+	max_stack 15
+	max_locals 15
+	{
+	sipush 5
+	sipush 10
+	invokestatic int example.add(int, int)
+/*15: c := add(a, 10)*/
+	putstatic int example.c
+	getstatic int example.c
+	sipush 10
+	isub
+	ifgt L0
+	iconst_0
+	goto L1
+	L0: iconst_1
+	L1:
+	ifeq L2
+/*16: if (c > 10) then*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*17:   put -c*/
+	getstatic int example.c
+	ineg
+	invokevirtual void java.io.PrintStream.print(int)
+	goto L3
+	L2:
+/*18: else */
+	getstatic java.io.PrintStream java.lang.System.out
+/*19:   put c*/
+	getstatic int example.c
+	invokevirtual void java.io.PrintStream.print(int)
+	L3:
+/*20: end if*/
+	getstatic java.io.PrintStream java.lang.System.out
+	ldc "Hello World\n"
+/*21: put "Hello World\n"*/
+	invokevirtual void java.io.PrintStream.print(java.lang.String)
+	return
+	}
+}

@@ -1,0 +1,140 @@
+class al3
+{
+	method public static int ADD(int, int)
+	max_stack 15
+	max_locals 15
+	{
+/*1: function ADD (n: int,m:int) : int*/
+	iload 0
+	sipush 0
+	isub
+	ifgt L0
+	iconst_0
+	goto L1
+	L0: iconst_1
+	L1:
+	ifeq L2
+/*2:   if(n>0) then*/
+	iload 0
+/*3:     result n+m*/
+	iload 1
+	iadd
+	ireturn
+	goto L3
+	L2:
+/*4:   else */
+	getstatic java.io.PrintStream java.lang.System.out
+	ldc "<0"
+/*5:      put"<0"   */
+	invokevirtual void java.io.PrintStream.print(java.lang.String)
+	getstatic java.io.PrintStream java.lang.System.out
+/*6:      put m*/
+	iload 1
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*7:      skip*/
+	iload 0
+/*8:      result n+m*/
+	iload 1
+	iadd
+	ireturn
+	L3:
+/*9:   end if*/
+
+	}
+/*10: end ADD*/
+/*11: */
+	method public static void putnum(int, int)
+	max_stack 15
+	max_locals 15
+	{
+/*12: procedure putnum (n: int,m:int)*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*13:  put n*/
+	iload 0
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*14:  skip*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*15:  put m*/
+	iload 1
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*16:  skip*/
+	return
+/*17:  return*/
+	getstatic java.io.PrintStream java.lang.System.out
+	iload 0
+/*18:  put n+m*/
+	iload 1
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+/*19:  put m*/
+	iload 1
+	invokevirtual void java.io.PrintStream.print(int)
+	}
+/*20: end putnum*/
+/*21: */
+	method public static void main(java.lang.String[])
+	max_stack 15
+	max_locals 15
+	{
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*22: skip*/
+	sipush 10
+/*23: var a:=10*/
+	istore 0
+	iload 0
+	sipush 1
+	isub
+	ifgt L4
+	iconst_0
+	goto L5
+	L4: iconst_1
+	L5:
+	ifeq L6
+/*24: if(a>1) then*/
+	getstatic java.io.PrintStream java.lang.System.out
+	iload 0
+	ineg
+	sipush 1
+	invokestatic int al3.ADD(int, int)
+/*25: 	put ADD(-a,1)*/
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*26: 	skip*/
+	iload 0
+	sipush 2
+	isub
+	ifge L8
+	iconst_0
+	goto L9
+	L8: iconst_1
+	L9:
+	ifeq L10
+/*27: 	if(a=>2) then*/
+	iload 0
+	sipush 1
+	iadd
+	sipush 2
+	invokestatic void al3.putnum(int, int)
+/*28:   	putnum (a+1,2)*/
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*29: 		skip*/
+	L10:
+/*30: 	end if*/
+	L6:
+/*31: end if*/
+/*32: */
+/*33: */
+/*34: */
+	return
+	}
+}

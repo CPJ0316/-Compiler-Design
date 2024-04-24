@@ -1,0 +1,97 @@
+class ifif
+{
+	method public static int ADD(int, int)
+	max_stack 15
+	max_locals 15
+	{
+/*1: function ADD (n: int,m:int) : int*/
+	iload 0
+/*2:  result n+m*/
+	iload 1
+	iadd
+	ireturn
+	}
+/*3: end ADD*/
+	method public static void putnum(int, int)
+	max_stack 15
+	max_locals 15
+	{
+/*4: procedure putnum (n: int,m:int)*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*5:  put n*/
+	iload 0
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*6:  skip*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*7:  put m*/
+	iload 1
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*8:  skip*/
+	return
+/*9:  return*/
+	}
+/*10: end putnum*/
+/*11: */
+	method public static void main(java.lang.String[])
+	max_stack 15
+	max_locals 15
+	{
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*12:   skip*/
+	sipush 5
+/*13: 	var a:=5*/
+	istore 0
+	iload 0
+	sipush 1
+	isub
+	ifgt L0
+	iconst_0
+	goto L1
+	L0: iconst_1
+	L1:
+	ifeq L2
+/*14: 	if(a>1) then*/
+	iload 0
+	sipush 1
+	invokestatic int ifif.ADD(int, int)
+/*15: 		a:= ADD(a,1)*/
+	istore 0
+	getstatic java.io.PrintStream java.lang.System.out
+/*16:     put a*/
+	iload 0
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*17: 		skip*/
+	iload 0
+	sipush 2
+	isub
+	ifgt L4
+	iconst_0
+	goto L5
+	L4: iconst_1
+	L5:
+	ifeq L6
+/*18: 		if(a>2) then*/
+	iload 0
+	sipush 1
+	iadd
+	sipush 2
+	invokestatic void ifif.putnum(int, int)
+/*19: 		putnum (a+1,2)*/
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*20: 		skip*/
+	L6:
+/*21: 		end if*/
+	L2:
+/*22: 	end if*/
+/*23: */
+	return
+	}
+}

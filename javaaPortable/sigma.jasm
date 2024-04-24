@@ -1,0 +1,95 @@
+class sigma
+{
+/*5: */
+/*7: const n: int := 10*/
+/*8: var sum: int*/
+	field static int sum
+/*9: var index: int*/
+/*10: */
+	field static int index
+	method public static void main(java.lang.String[])
+	max_stack 15
+	max_locals 15
+	{
+	sipush 0
+/*12: sum := 0*/
+	putstatic int sigma.sum
+	sipush 1
+	putstatic int sigma.index
+	L0:
+	getstatic int sigma.index
+/*13: for index: 1 .. n */
+	sipush 10
+	isub
+	ifgt L2
+	iconst_0
+	goto L3
+	L2: iconst_1
+	L3:
+	ifne L1
+	getstatic int sigma.sum
+/*14:   sum := sum + index*/
+	getstatic int sigma.index
+	iadd
+	putstatic int sigma.sum
+	getstatic int sigma.index
+	sipush 1
+	iadd
+	putstatic int sigma.index
+	goto L0
+	L1:
+/*15: end for*/
+	getstatic java.io.PrintStream java.lang.System.out
+	ldc "The result is "
+/*16: put "The result is "*/
+	invokevirtual void java.io.PrintStream.print(java.lang.String)
+	getstatic java.io.PrintStream java.lang.System.out
+/*17: put sum*/
+	getstatic int sigma.sum
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*18: skip*/
+/*19: */
+	sipush 0
+/*21: sum := 0*/
+	putstatic int sigma.sum
+	sipush 1
+/*22: index := 1*/
+	putstatic int sigma.index
+	L4:
+/*23: loop*/
+	getstatic int sigma.sum
+/*24:   sum := sum + index*/
+	getstatic int sigma.index
+	iadd
+	putstatic int sigma.sum
+	getstatic int sigma.index
+	sipush 1
+/*25:   index := index + 1*/
+	iadd
+	putstatic int sigma.index
+	getstatic int sigma.index
+/*26:   exit when index = n*/
+	sipush 10
+	isub
+	ifeq L6
+	iconst_0
+	goto L7
+	L6: iconst_1
+	L7:
+	ifne L5
+	goto L4
+	L5:
+/*27: end loop*/
+	getstatic java.io.PrintStream java.lang.System.out
+	ldc "The result is "
+/*28: put "The result is "*/
+	invokevirtual void java.io.PrintStream.print(java.lang.String)
+	getstatic java.io.PrintStream java.lang.System.out
+/*29: put sum*/
+	getstatic int sigma.sum
+	invokevirtual void java.io.PrintStream.print(int)
+	return
+	}
+}

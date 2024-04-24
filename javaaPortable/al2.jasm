@@ -1,0 +1,140 @@
+class al2
+{
+/*1: const a :int := 2+3*/
+/*2: const b:= 2*/
+/*3: const str1:= "str1----"*/
+/*4: var c :int := 5-3*/
+	field static int c = 2
+/*5: var d :int*/
+	field static int d
+/*6: var e := 2+3*/
+/*7: */
+	field static int e = 5
+	method public static void print(int)
+	max_stack 15
+	max_locals 15
+	{
+/*8: procedure print(x:int)*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*9:   put x*/
+	iload 0
+	invokevirtual void java.io.PrintStream.print(int)
+	return
+/*10:   return*/
+	getstatic java.io.PrintStream java.lang.System.out
+	ldc "x+1:"
+/*11:   put "x+1:"*/
+	invokevirtual void java.io.PrintStream.print(java.lang.String)
+	getstatic java.io.PrintStream java.lang.System.out
+	iload 0
+	sipush 1
+/*12:   put x+1*/
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*13:   skip*/
+	}
+/*14: end print*/
+/*15: */
+	method public static void main(java.lang.String[])
+	max_stack 15
+	max_locals 15
+	{
+	sipush 8
+/*17: d:=8*/
+	putstatic int al2.d
+	getstatic java.io.PrintStream java.lang.System.out
+/*18: put str1*/
+	ldc "str1----"
+	invokevirtual void java.io.PrintStream.print(java.lang.String)
+	ldc "str2****"
+/*19: const str2:="str2****"*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*20: put str2*/
+	ldc "str2****"
+	invokevirtual void java.io.PrintStream.print(java.lang.String)
+	sipush 1
+/*21: var i := 1*/
+	istore 0
+	sipush 1
+	putstatic int al2.c
+	L0:
+	getstatic int al2.c
+	sipush 5
+	sipush 2
+/*22: for c: 1 .. a-2*/
+	isub
+	isub
+	ifgt L2
+	iconst_0
+	goto L3
+	L2: iconst_1
+	L3:
+	ifne L1
+	getstatic java.io.PrintStream java.lang.System.out
+/*23:   put c*/
+	getstatic int al2.c
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*24:   skip*/
+	getstatic int al2.c
+	invokestatic void al2.print(int)
+/*25:   print(c)*/
+	sipush 3
+	sipush 2
+	imul
+	istore 0
+	L4:
+	iload 0
+	sipush 10
+	sipush 10
+/*26:   for decreasing i : 3*2 .. 10-10   */
+	isub
+	isub
+	iflt L6
+	iconst_0
+	goto L7
+	L6: iconst_1
+	L7:
+	ifne L5
+	iload 0
+	sipush 1
+	isub
+	ifeq L8
+	iconst_0
+	goto L9
+	L8: iconst_1
+	L9:
+/*27:     exit when (i = 1)*/
+	ifne L5
+	getstatic java.io.PrintStream java.lang.System.out
+/*28:     put i*/
+	iload 0
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*29:     skip*/
+/*30:     */
+	iload 0
+	sipush 1
+	isub
+	istore 0
+	goto L4
+	L5:
+/*31:   end for*/
+	getstatic int al2.c
+	sipush 1
+	iadd
+	putstatic int al2.c
+	goto L0
+	L1:
+/*32: end for*/
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*33: skip*/
+/*34: */
+	return
+	}
+}

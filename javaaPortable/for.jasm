@@ -1,0 +1,211 @@
+class for
+{
+/*1: var i := 0*/
+	field static int i = 0
+/*2: var y := 1*/
+/*3: */
+	field static int y = 1
+	method public static void main(java.lang.String[])
+	max_stack 15
+	max_locals 15
+	{
+	sipush 1
+	putstatic int for.i
+	L0:
+	getstatic int for.i
+	sipush 10
+/*4: for i : 1 .. 10*/
+	isub
+	ifgt L2
+	iconst_0
+	goto L3
+	L2: iconst_1
+	L3:
+	ifne L1
+	getstatic java.io.PrintStream java.lang.System.out
+/*5:   put i*/
+	getstatic int for.i
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic int for.i
+	sipush 1
+	iadd
+	putstatic int for.i
+	goto L0
+	L1:
+/*6: end for*/
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*7: skip*/
+/*8: */
+	sipush 1
+/*9: var b := 1*/
+	istore 0
+	sipush 1
+	putstatic int for.i
+	L4:
+	getstatic int for.i
+	sipush 3
+/*10: for i : 1 .. 3*/
+	isub
+	ifgt L6
+	iconst_0
+	goto L7
+	L6: iconst_1
+	L7:
+	ifne L5
+	getstatic java.io.PrintStream java.lang.System.out
+/*11:   put i*/
+	getstatic int for.i
+	invokevirtual void java.io.PrintStream.print(int)
+	sipush 4
+	istore 0
+	L8:
+	iload 0
+	sipush 6
+/*12:   for b : 4 .. 6*/
+	isub
+	ifgt L10
+	iconst_0
+	goto L11
+	L10: iconst_1
+	L11:
+	ifne L9
+	getstatic java.io.PrintStream java.lang.System.out
+/*13:   put b*/
+	iload 0
+	invokevirtual void java.io.PrintStream.print(int)
+	iload 0
+	sipush 1
+	iadd
+	istore 0
+	goto L8
+	L9:
+/*14:   end for*/
+	getstatic int for.i
+	sipush 1
+	iadd
+	putstatic int for.i
+	goto L4
+	L5:
+/*15: end for*/
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*16: skip*/
+/*17: */
+/*18: */
+	sipush 0
+/*19: var x := 0*/
+	istore 1
+	sipush 10
+	istore 1
+	L12:
+	iload 1
+	sipush 1
+/*20: for decreasing x : 10 .. 1*/
+	isub
+	iflt L14
+	iconst_0
+	goto L15
+	L14: iconst_1
+	L15:
+	ifne L13
+	getstatic java.io.PrintStream java.lang.System.out
+/*21:   put x*/
+	iload 1
+	invokevirtual void java.io.PrintStream.print(int)
+	iload 1
+	sipush 1
+	isub
+	istore 1
+	goto L12
+	L13:
+/*22: end for*/
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*23: skip*/
+/*24: */
+	sipush 10
+	istore 1
+	L16:
+	iload 1
+	sipush 8
+/*25: for decreasing x : 10 .. 8*/
+	isub
+	iflt L18
+	iconst_0
+	goto L19
+	L18: iconst_1
+	L19:
+	ifne L17
+	getstatic java.io.PrintStream java.lang.System.out
+/*26:   put x*/
+	iload 1
+	invokevirtual void java.io.PrintStream.print(int)
+	sipush 7
+	putstatic int for.y
+	L20:
+	getstatic int for.y
+	sipush 4
+/*27:   for decreasing y : 7 .. 4*/
+	isub
+	iflt L22
+	iconst_0
+	goto L23
+	L22: iconst_1
+	L23:
+	ifne L21
+	getstatic java.io.PrintStream java.lang.System.out
+/*28:   put y*/
+	getstatic int for.y
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic int for.y
+	sipush 1
+	isub
+	putstatic int for.y
+	goto L20
+	L21:
+/*29:   end for*/
+	iload 1
+	sipush 1
+	isub
+	istore 1
+	goto L16
+	L17:
+/*30: end for*/
+/*31: */
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*32: skip*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*33: put i*/
+	getstatic int for.i
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*34: skip*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*35: put x*/
+	iload 1
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*36: skip*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*37: put b*/
+	iload 0
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*38: skip*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*39: put y*/
+	getstatic int for.y
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*40: skip*/
+/*41: */
+/*42: */
+	return
+	}
+}

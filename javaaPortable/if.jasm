@@ -1,0 +1,299 @@
+class if
+{
+/*1: const c:= 5*/
+/*2: */
+	method public static void main(java.lang.String[])
+	max_stack 15
+	max_locals 15
+	{
+	sipush 5
+	sipush 10
+	isub
+	ifgt L0
+	iconst_0
+	goto L1
+	L0: iconst_1
+	L1:
+	ifeq L2
+/*3: if (c > 10) then*/
+	getstatic java.io.PrintStream java.lang.System.out
+/*4:   put -c*/
+	sipush 5
+	ineg
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*5:   skip*/
+	goto L3
+	L2:
+/*6: else */
+	getstatic java.io.PrintStream java.lang.System.out
+/*7:   put c*/
+	sipush 5
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*8:   skip*/
+	L3:
+/*9: end if*/
+/*10: */
+/*11: */
+	sipush 5
+	sipush 2
+	isub
+	ifgt L4
+	iconst_0
+	goto L5
+	L4: iconst_1
+	L5:
+	ifeq L6
+/*12: if (c > 2) then*/
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 5
+/*13:   put c+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*14:   skip*/
+	L6:
+/*15: end if*/
+/*16: */
+/*17: */
+	sipush 5
+	sipush 10
+	isub
+	ifgt L8
+	iconst_0
+	goto L9
+	L8: iconst_1
+	L9:
+	ifeq L10
+/*18: if (c>10) then*/
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 1
+/*19:   put 1+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*20:   skip*/
+	goto L11
+	L10:
+/*21: else */
+	sipush 5
+	sipush 2
+	isub
+	ifgt L12
+	iconst_0
+	goto L13
+	L12: iconst_1
+	L13:
+	ifeq L14
+/*22: 	if (c>2)then*/
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 2
+/*23:   	put 2+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*24:         skip*/
+	goto L15
+	L14:
+/*25: 	else*/
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 3
+/*26: 	put 3+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	L15:
+/*27: 	end if*/
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 4
+/*28:  put 4+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*29:  skip*/
+	L11:
+/*30: end if*/
+/*31:  */
+/*32:  */
+	sipush 5
+	sipush 1
+	isub
+	ifgt L16
+	iconst_0
+	goto L17
+	L16: iconst_1
+	L17:
+	ifeq L18
+/*33: if (c>1) then*/
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 10
+/*34:   put 10+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*35:   skip*/
+	sipush 5
+	sipush 6
+	isub
+	ifgt L20
+	iconst_0
+	goto L21
+	L20: iconst_1
+	L21:
+	ifeq L22
+/*36: 	if (c>6)then*/
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 20
+/*37:   		put 20+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*38: 		skip*/
+	goto L23
+	L22:
+/*39:    	else */
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 30
+/*40:     		put 30+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*41: 		skip*/
+	L23:
+/*42: 	end if*/
+	getstatic java.io.PrintStream java.lang.System.out
+	ldc "123"
+/*43: put "123"*/
+	invokevirtual void java.io.PrintStream.print(java.lang.String)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*44: skip*/
+	L18:
+/*45: end if*/
+/*46: */
+/*47:  */
+	sipush 5
+	sipush 1
+	isub
+	ifgt L24
+	iconst_0
+	goto L25
+	L24: iconst_1
+	L25:
+	ifeq L26
+/*48: if (c>1) then*/
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 1
+/*49:   put 1+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*50:   skip*/
+	sipush 5
+	sipush 2
+	isub
+	ifgt L28
+	iconst_0
+	goto L29
+	L28: iconst_1
+	L29:
+	ifeq L30
+/*51: 	if (c>2)then*/
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 2
+/*52:   	put 2+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*53:         skip*/
+	L30:
+/*54: 	end if*/
+	goto L27
+	L26:
+/*55: else */
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 4
+/*56:  put 4+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*57:  skip*/
+	L27:
+/*58: end if*/
+/*59:  */
+/*60:  */
+	sipush 5
+	sipush 1
+	isub
+	ifgt L32
+	iconst_0
+	goto L33
+	L32: iconst_1
+	L33:
+	ifeq L34
+/*61: if (c>1) then*/
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 10
+/*62:   put 10+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*63:   skip*/
+	sipush 5
+	sipush 2
+	isub
+	ifgt L36
+	iconst_0
+	goto L37
+	L36: iconst_1
+	L37:
+	ifeq L38
+/*64: 	if (c>2)then*/
+	getstatic java.io.PrintStream java.lang.System.out
+	sipush 20
+/*65:   	put 20+c*/
+	sipush 5
+	iadd
+	invokevirtual void java.io.PrintStream.print(int)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*66: 	skip*/
+	L38:
+/*67: 	end if*/
+	getstatic java.io.PrintStream java.lang.System.out
+	ldc "123"
+/*68: put "123"*/
+	invokevirtual void java.io.PrintStream.print(java.lang.String)
+	getstatic java.io.PrintStream java.lang.System.out
+	invokevirtual void java.io.PrintStream.println()
+/*69: skip*/
+	L34:
+/*70: end if*/
+	return
+	}
+}
